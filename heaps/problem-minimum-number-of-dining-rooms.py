@@ -15,6 +15,7 @@
 # Input: [(1PM, 1:30PM), (1PM,2PM), (2PM, 3PM), (3PM,4PM)]
 # Output: 2
 
+from heapq import heappop, heappush
 meetings = [[12, 16], [13, 13.5], [13, 14], [14, 15], [15, 16]]
 
 # if list is empty, zero rooms
@@ -28,3 +29,8 @@ meetings = [[12, 16], [13, 13.5], [13, 14], [14, 15], [15, 16]]
 #     |||
 #       ||||
 #          |||||
+
+
+def min_rooms(meetings):
+    meetings.sort()
+    min_heap = []
